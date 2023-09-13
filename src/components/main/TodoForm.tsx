@@ -1,6 +1,8 @@
 import { observer } from "mobx-react-lite";
 import { StyledTodoForm } from "./todoFormStyled";
 import todosState from "../../store/TodosState";
+import {textGeo} from "../../textLocalization";
+
 import { Todo } from "../../type"
 
 const TodoForm = observer(() => {
@@ -21,11 +23,17 @@ const TodoForm = observer(() => {
   return (
     <StyledTodoForm onSubmit={handleSubmit}>
       <fieldset className={`todoForm__inputs ${todosState.isChangeTodo ? "todoForm__inputs_add" : ""}`}>
-        <legend className="todoForm__heading">{todosState.isChangeTodo ? "Изменить" : "Добавить"} задачу:</legend>
+        <legend className="todoForm__heading">
+          {todosState.isChangeTodo ? 
+            (todosState.isGeo ? textGeo.formHeading.fixEng : textGeo.formHeading.fixRu) : 
+            (todosState.isGeo ? textGeo.formHeading.addEng : textGeo.formHeading.addRu)
+          }
+            {todosState.isGeo ? textGeo.formHeading.eng : textGeo.formHeading.ru}
+        </legend>
         <input
           className="todoForm__inputName"
           value={todosState.heading}
-          placeholder="Название"
+          placeholder={todosState.isGeo ? textGeo.inputName.eng : textGeo.inputName.ru}
           minLength={1}
           maxLength={20}
           onChange={(e)=>{todosState.setHeading(e.target.value)}}
@@ -33,14 +41,18 @@ const TodoForm = observer(() => {
         <input
           className="todoForm__inputText"
           value={todosState.text}
-          placeholder="Описание"
+          placeholder={todosState.isGeo ? textGeo.inputText.eng : textGeo.inputText.ru}
           minLength={1}
           maxLength={50}
           onChange={(e)=>{todosState.setText(e.target.value)}}
         />
         <div className={`todoForm__buttons ${todosState.isChangeTodo ? "todoForm__buttons_end" : ""}`}>
-          <button className="todoForm__buttonSubmit" onSubmit={handleSubmit}> Сохранить </button>
-          {todosState.isChangeTodo && <button className="todoForm__buttonCancel" onSubmit={()=>{todosState.resetForm()}}> Отменить </button>}
+          <button className="todoForm__buttonSubmit" onSubmit={handleSubmit}>
+            {todosState.isGeo ? textGeo.buttonSubmit.eng : textGeo.buttonSubmit.ru}
+          </button>
+          {todosState.isChangeTodo && <button className="todoForm__buttonCancel" onSubmit={()=>{todosState.resetForm()}}>
+            {todosState.isGeo ? textGeo.buttonCancel.eng : textGeo.buttonCancel.ru}
+          </button>}
         </div>
       </fieldset>
     </StyledTodoForm>    

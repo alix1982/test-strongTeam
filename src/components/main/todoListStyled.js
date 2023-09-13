@@ -3,9 +3,6 @@ import styled from 'styled-components';
 export const StyledTodoList = styled.article`
     width: 100%;
 
-    /* width: calc(100% - 100px);
-    padding: 50px; */
-
     .todoList__header {
         display: flex;
         justify-content: space-between;

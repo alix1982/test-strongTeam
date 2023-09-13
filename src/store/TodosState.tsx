@@ -3,13 +3,14 @@ import { Todo } from "../type"
 import { todosDefault } from "../todosDefault";
 
 class Todos {
-    // todosSort: Todo[];
     todosSort = todosDefault;
     heading = '';
     text = '';
     id = 0;
     toggler = false;
     isChangeTodo = false;
+    isGeo = false;
+    country = 'ENG';
 
     constructor () {
       makeAutoObservable(this);
@@ -26,7 +27,6 @@ class Todos {
       e.preventDefault();
       if (this.isChangeTodo) {
         (this.todosSort.map(todo=> (todo.id === this.id) && 
-          // {...todo, heading: this.heading, text: this.text}
           (todo.heading = this.heading, todo.text = this.text)
         ))
       } else {
@@ -78,8 +78,7 @@ class Todos {
     }
 
     sortTodos() {
-      // console.log(to)
-      // let toggler = false;
+
       this.todosSort.sort((a, b) => this._sortHeading(a, b))
       this.toggler ? 
         this.todosSort.sort((a, b) => this._sortCompleted(b, a)) :
@@ -87,11 +86,16 @@ class Todos {
         this.toggler = !this.toggler;
     }
     changeTodo(heading:string, text:string, id:number)  {
-      console.log('ok');
       this.isChangeTodo = true;
       this.heading = heading;
       this.text = text;
       this.id = id;
+    }
+    setLanguage() {
+      this.isGeo = !this.isGeo;
+    }
+    setLocation(country:string) {
+      this.country = country;
     }
 }
 

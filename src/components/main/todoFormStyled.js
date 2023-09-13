@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledTodoForm = styled.form`
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     margin-bottom: 30px;
-    /* width: calc(100% - 100px);
-    padding: 0 50px; */
 
     .todoForm__heading {
         margin: 0 auto 20px 0;
@@ -33,6 +30,11 @@ export const StyledTodoForm = styled.form`
         margin: 0;
         margin-bottom: 5px;
         padding: 5px 10px;
+        transition: opacity 0.5s linear;
+        cursor: pointer;
+    }
+    .todoForm__inputName:hover, .todoForm__inputText:hover {
+        opacity: 0.6;
     }
     .todoForm__buttons {
         width: 100%;
@@ -47,8 +49,12 @@ export const StyledTodoForm = styled.form`
         width: 35%;
         height: 25px;
         border-radius: 10px;
+        transition: opacity 0.5s linear;
+        cursor: pointer;
     }
-
+    .todoForm__buttonSubmit:hover, .todoForm__buttonCancel:hover {
+        opacity: 0.6;
+    }
     .todoForm__buttonCancel {
         color: red;
     }

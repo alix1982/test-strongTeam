@@ -1,6 +1,4 @@
 import { StyledTodoItem } from "./todoItemStyled";
-// import todosState from "../../../store/TodosState";
-
 import TodoCompleted from "./TodoCompleted";
 import TodoRemove from "./TodoREmove";
 import TodoContent from "./TodoContent";
@@ -18,10 +16,7 @@ const TodoItem: React.FC<Props> = ({id, completed, heading, text }) => {
 
   return (
     <StyledTodoItem key={id} >
-      <div
-        className={`todoItem__point ${completed ? "todoItem__point_completed" : ""}`} 
-        // onClick={() => {todosState.changeTodo(heading, text, id)}}
-      >
+      <div className={`todoItem__point ${completed ? "todoItem__point_completed" : ""}`}>
          <div className="todoItem__buttons">
           <TodoCompleted completed={completed} id={id} />
           <TodoRemove id={id}/>
