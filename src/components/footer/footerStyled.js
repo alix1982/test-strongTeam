@@ -4,8 +4,9 @@ export const StyledFooter = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 100px);
-    padding: 0 50px;
+    width: 100%;
+    /* width: calc(100% - 100px);
+    padding: 0 50px; */
     /* margin: 0 20px; */
     .footer__copyright {
         align-self: flex-start;

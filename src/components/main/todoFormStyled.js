@@ -5,8 +5,10 @@ export const StyledTodoForm = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% - 100px);
-    padding: 0 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    /* width: calc(100% - 100px);
+    padding: 0 50px; */
 
     .todoForm__heading {
         margin: 0 auto 20px 0;
@@ -49,5 +51,11 @@ export const StyledTodoForm = styled.form`
 
     .todoForm__buttonCancel {
         color: red;
+    }
+
+    @media (max-width: 750px) {
+        .todoForm__buttonSubmit, .todoForm__buttonCancel {
+            width: 45%;
+        }
     }
 `;

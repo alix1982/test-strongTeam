@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTodoList = styled.article`
-    width: calc(100% - 100px);
-    padding: 50px;
+    width: 100%;
+
+    /* width: calc(100% - 100px);
+    padding: 50px; */
 
     .todoList__header {
         display: flex;
@@ -14,10 +16,14 @@ export const StyledTodoList = styled.article`
         font-weight: bold;
     }
     .todoList__sort {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 30px;
         height: 30px;
-        object-fit: contain;
-        border: 0.1px solid #000000;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #000000;
         border-radius: 50%;
     }
     .todoList__list {

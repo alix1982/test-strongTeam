@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.section`
     margin-bottom: 30px;
-    width: calc(100% - 100px);
-    padding: 0 50px;
+    width: 100%;
+    /* width: calc(100% - 100px);
+    padding: 0 50px; */
 
     .header__heading {
         font-size: 36px;

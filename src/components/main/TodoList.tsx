@@ -4,7 +4,6 @@ import todosState from "../../store/TodosState";
 import TodoItem from "./Todo/TodoItem";
 import { ReactComponent as SortIcon } from "../img/sortIcon.svg";
 
-
 const TodoList = observer(() => {
 
   return (
