@@ -22,6 +22,11 @@ export const StyledTodoList = styled.article`
         margin: 0;
         border: 1px solid #000000;
         border-radius: 50%;
+        transition: opacity 0.5s linear;
+        cursor: pointer;
+    }
+    .todoList__sort:hover {
+        opacity: 0.6;
     }
     .todoList__list {
         display: flex;
