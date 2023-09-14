@@ -10,7 +10,7 @@ const TodoForm = observer(() => {
   const handleSubmit = (e: React.FormEvent) => {
     
     let count = 0;
-    todosState.todosSort.forEach((todo: Todo)=>{(todo.id > count) && (count = todo.id)});
+    todosState.todosSort.forEach((todo: Todo)=>{(todo.id > count) && (count = todo.id)}); // определение максимального занчения id в списке задач, для id новой задачи
 
     todosState.addTodo(e, {
       id: count+1,

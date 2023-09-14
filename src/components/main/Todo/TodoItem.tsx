@@ -13,7 +13,6 @@ interface Props {
 
 const TodoItem: React.FC<Props> = ({id, completed, heading, text }) => {
 
-
   return (
     <StyledTodoItem key={id} >
       <div className={`todoItem__point ${completed ? "todoItem__point_completed" : ""}`}>
