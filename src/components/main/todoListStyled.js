@@ -12,7 +12,29 @@ export const StyledTodoList = styled.article`
         font-size: 20px;
         font-weight: bold;
     }
+    .todoList__sortsHeading {
+        margin: 0;
+    }
+    .todoList__sorts {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+    }
     .todoList__sort {
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center; */
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        transition: opacity 0.5s linear;
+        cursor: pointer;
+    }
+    .todoList__sort:hover {
+        opacity: 0.6;
+    }
+    .todoList__sortIcon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,7 +47,7 @@ export const StyledTodoList = styled.article`
         transition: opacity 0.5s linear;
         cursor: pointer;
     }
-    .todoList__sort:hover {
+    .todoList__sortIcon:hover {
         opacity: 0.6;
     }
     .todoList__list {

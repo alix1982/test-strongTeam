@@ -35,4 +35,32 @@ export const textGeo = {
         ru: "Мои задачи:",
         eng: "My tasks:"
     },
+    sortHeading: {
+        ru: "Сортировка:",
+        eng: "Sorting:"
+    },
+    sortName: {
+        ru: "Имя",
+        eng: "Name"
+    },
+    sortDate: {
+        ru: "Дата",
+        eng: "Date"
+    },
+    sortImportantly: {
+        ru: "Важные",
+        eng: "Importantly"
+    },
+    sortChecked: {
+        ru: "Выполненые",
+        eng: "Checked"
+    },
+    inputTextImportantly: {
+        ru: "Важно",
+        eng: "Importantly"
+    },
+    inputTextReallyImportantly: {
+        ru: "Очень Важно",
+        eng: "Really importantly"
+    },
 }

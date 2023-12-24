@@ -9,9 +9,10 @@ interface Props {
   completed: boolean;
   heading: string;
   text: string;
+  importantly: string,
 }
 
-const TodoItem: React.FC<Props> = ({id, completed, heading, text }) => {
+const TodoItem: React.FC<Props> = ({id, completed, heading, text, importantly }) => {
 
   return (
     <StyledTodoItem key={id} >
@@ -20,7 +21,7 @@ const TodoItem: React.FC<Props> = ({id, completed, heading, text }) => {
           <TodoCompleted completed={completed} id={id} />
           <TodoRemove id={id}/>
         </div>
-        <TodoContent completed={completed} heading={heading} text={text} id={id} />
+        <TodoContent completed={completed} heading={heading} text={text} id={id} importantly={importantly} />
       </div>
     </StyledTodoItem>
   )

@@ -2,5 +2,7 @@ export interface Todo {
     id: number,
     heading: string,
     text: string,
-    completed: boolean;
+    importantly: string,
+    completed: boolean,
+    createDate: number,
   }

@@ -58,6 +58,24 @@ export const StyledTodoForm = styled.form`
     .todoForm__buttonCancel {
         color: red;
     }
+    .todoForm__inputsRadio {
+        display: flex;
+        gap: 30px;
+        border: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+    }
+    .todoForm__inputRadio {
+        display: flex;
+        gap: 10px;
+    }
+    .todoForm__inputImportantly {
+        margin: 0;
+    }
+    .todoForm__importantlyText {
+        margin: 0;
+    }
 
     @media (max-width: 750px) {
         .todoForm__buttonSubmit, .todoForm__buttonCancel {
