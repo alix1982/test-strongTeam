@@ -19,6 +19,9 @@ export const StyledTodoList = styled.article`
         display: flex;
         gap: 10px;
         align-items: baseline;
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
     }
     .todoList__sort {
         /* display: flex; */
@@ -30,6 +33,9 @@ export const StyledTodoList = styled.article`
         margin: 0;
         transition: opacity 0.5s linear;
         cursor: pointer;
+        @media (max-width: 750px) {
+            gap: 5px;
+        }
     }
     .todoList__sort:hover {
         opacity: 0.6;

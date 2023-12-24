@@ -51,6 +51,9 @@ export const StyledTodoForm = styled.form`
         border-radius: 10px;
         transition: opacity 0.5s linear;
         cursor: pointer;
+        @media (max-width: 750px) {
+            width: 45%;
+        }
     }
     .todoForm__buttonSubmit:hover, .todoForm__buttonCancel:hover {
         opacity: 0.6;
@@ -69,17 +72,15 @@ export const StyledTodoForm = styled.form`
     .todoForm__inputRadio {
         display: flex;
         gap: 10px;
+        align-items: center;
     }
     .todoForm__inputImportantly {
         margin: 0;
     }
     .todoForm__importantlyText {
         margin: 0;
+        text-align: left;
     }
 
-    @media (max-width: 750px) {
-        .todoForm__buttonSubmit, .todoForm__buttonCancel {
-            width: 45%;
-        }
-    }
+    
 `;
